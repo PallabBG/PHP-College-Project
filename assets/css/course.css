@@ -1,0 +1,105 @@
+/* assets/css/course.css */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.course-card {
+    background-color: var(--bg-white);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.course-thumbnail {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background-color: #E5E7EB;
+}
+
+.course-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.course-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.course-desc {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+/* Progress bar */
+.progress-container {
+    background-color: #E5E7EB;
+    border-radius: 9999px;
+    height: 0.5rem;
+    width: 100%;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+    height: 100%;
+}
+
+/* Lecture Page */
+.lecture-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: #000;
+    aspect-ratio: 16/9;
+}
+
+.lecture-list {
+    background: var(--bg-white);
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 1rem;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.lecture-item {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lecture-item.active {
+    background-color: #EFF6FF;
+    border-left: 4px solid var(--primary-color);
+}
